@@ -6,6 +6,7 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 
 gem 'jbuilder'
+gem 'jwt_sessions', '~> 2.6'
 gem 'passenger', '>= 6.0.12', require: 'phusion_passenger/rack_handler'
 gem 'pg', '~>1.3'
 
@@ -16,19 +17,20 @@ gem 'rack-cors'
 
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-#gem "redis", "~> 4.0"
+# gem "redis", "~> 4.0"
 # gem "kredis"
-
-
-
+#
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'debug', platforms: %i[ mri mingw x64_mingw ]
+  gem 'pry', '~> 0.10.3'
+end
+
+group :test do
+  gem 'rspec', '~> 3.4'
 end
 
 group :development do
